@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mod9" translate="label" sortOrder="1">
+            <label>Mod9</label>
+        </tab>
+        <section id="mod9" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>General Settings</label>
+            <tab>mod9</tab>
+            <resource>Custom_Config::config</resource>
+            <group id="customconfig_group" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If set yes, a text box will appear</comment>
+                </field>
+                <field id="text_to_display" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text to Display</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>integer required-entry</validate>
+                    <comment>Text to be displayed</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

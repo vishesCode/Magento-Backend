@@ -1,0 +1,23 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Theme\Block\Html\Footer">
+        <plugin name="custom_copyright_text" type="NewVendor\CustomModule\Plugin\Footerplugin" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="custom_copyright" type="NewVendor\CustomModule\Plugin\Footerplugin" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Magento\Theme\Block\Html\Header">
+        <plugin name="custom_welcome" type="NewVendor\CustomModule\Plugin\Footerplugin" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Magento\Cms\Controller\NoRoute\Index">
+        <plugin name="noroute" type="NewVendor\CustomModule\Plugin\Routing" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Magento\Catalog\Block\Product\View\Description">
+        <plugin name="desc" type="NewVendor\CustomModule\Plugin\Description" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Magento\Framework\App\Router\NoRouteHandler">
+        <plugin name="desc" type="NewVendor\CustomModule\Plugin\NoRoute" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="foo_bar_plugin_breadcrumbs_modification" type="NewVendor\CustomModule\Plugin\Breadcrumb" sortOrder="1" />
+    </type>
+</config>

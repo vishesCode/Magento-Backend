@@ -1,0 +1,18 @@
+<form method="post" action=<?= $escaper->escapeUrl($block->getUrl('form/manage/save')); ?>>
+
+
+<div>
+    <label for="name">First Name</label>
+    <input type="text" name="first_name">
+
+    <label for="name">Last Name</label>
+    <input type="text" name="last_name">
+
+
+    <label for="email">Email</label>
+    <input type="email" name="email_id">
+
+    <button type="submit">Submit</button>
+</div>
+
+</form>

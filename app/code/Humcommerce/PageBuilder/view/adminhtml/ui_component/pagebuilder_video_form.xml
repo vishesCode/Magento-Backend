@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd" extends="pagebuilder_base_form">
+    <fieldset name="general" sortOrder="20">
+        <field name="video_source" formElement="input">
+            <settings>
+                <validation>
+                    <rule name="validate-video-source" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Video URL</label>
+                <notice translate="true">URLs with file extension (.mp4, .webm, .ogv) or links to videos on YouTube or Vimeo.</notice>
+            </settings>
+        </field>
+        <field name="video_uploader" formElement="fileUploader">
+            <settings>
+                <label translate="true">Video</label>
+                <componentType>fileUploader</componentType>
+            </settings>
+            <formElements>
+                <fileUploader>
+                    <settings>
+                        <allowedExtensions>mp4 webm</allowedExtensions>
+                        <maxFileSize>10000000</maxFileSize>
+                        <placeholderType>video</placeholderType>
+                        <uploaderConfig>
+                            <param xsi:type="string" name="url">pagebuilder/contenttype/video_upload</param>
+                        </uploaderConfig>
+                        <previewTmpl>Humcommerce_PageBuilder/form/element/uploader/video/preview</previewTmpl>
+                    </settings>
+                </fileUploader>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

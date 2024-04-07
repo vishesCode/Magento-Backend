@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="header-wrapper">
+
+        <block class="Magento\Framework\View\Element\Template" before="-" name="welcome_display1" template="NewVendor_CustomModule::default.phtml" />
+        <!-- <block class="NewVendor\CustomModule\Block\Save" name="welcome_display2" template="NewVendor_CustomModule::hello1.phtml" /> -->
+
+    </referenceContainer>
+</body>
+</page>
